@@ -1,0 +1,50 @@
+{
+  "name": "dockerkitten",
+  "version": "1.0.0",
+  "description": "Toggle docker services on and off based on docker-compose config.",
+  "author": "Michael Johansen",
+  "scripts": {
+    "build": "vue-cli-service build",
+    "lint": "node_modules/.bin/tslint --project tsconfig.json --fix --force",
+    "electron:build": "vue-cli-service electron:build",
+    "electron:serve": "vue-cli-service electron:serve",
+    "postinstall": "electron-builder install-app-deps",
+    "postuninstall": "electron-builder install-app-deps",
+    "start": "yarn build && electron ./dist/main.js",
+    "watch": "tsc -w"
+  },
+  "main": "background.js",
+  "dependencies": {
+    "@types/dockerode": "^2.5.16",
+    "core-js": "^2.6.5",
+    "dockerode": "^2.5.8",
+    "ts-vue-plugin": "^0.2.0",
+    "vue": "^2.6.10",
+    "vue-class-component": "^7.0.2",
+    "vue-property-decorator": "^8.1.0",
+    "vue-router": "^3.0.3",
+    "vuetify": "^1.5.5",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.7.0",
+    "@vue/cli-plugin-typescript": "^3.7.0",
+    "@vue/cli-service": "^3.7.0",
+    "electron": "^5.0.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.5",
+    "vue-cli-plugin-electron-builder": "^1.3.2",
+    "vue-cli-plugin-vuetify": "^0.5.0",
+    "vue-template-compiler": "^2.5.21",
+    "vuetify-loader": "^1.0.5"
+  },
+  "keywords": [
+    "Electron"
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/mijohansen/dockerkitten"
+}
